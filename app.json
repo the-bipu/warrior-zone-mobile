@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "warrior-zone-mobile",
-    "slug": "warrior-zone-mobile",
+    "name": "saa-alumni-verify",
+    "slug": "saa-alumni-verify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "warriorzonemobile",
+    "scheme": "saaalumniverify",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -22,6 +22,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },

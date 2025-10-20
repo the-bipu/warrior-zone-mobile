@@ -1,50 +1,186 @@
-# Welcome to your Expo app 👋
+# React Native + NativeWind Template
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native template with NativeWind (TailwindCSS) pre-configured and ready to use. This template provides a solid foundation for building cross-platform mobile applications with a utility-first styling approach.
 
-## Get started
+## Features
 
-1. Install dependencies
+- ⚡ **React Native** - Build native apps using React
+- 🎨 **NativeWind** - TailwindCSS for React Native
+- 📱 **Cross-platform** - iOS and Android support
+- 🔧 **TypeScript** - Type safety out of the box
+- 🎯 **ESLint** - Code linting and formatting
+- 📦 **Pre-configured** - Ready to start coding immediately
 
+## Tech Stack
+
+- React Native
+- NativeWind v4
+- TypeScript
+- Metro Bundler
+- Babel
+- ESLint
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v16 or higher)
+- npm or yarn
+- React Native development environment ([Setup Guide](https://reactnative.dev/docs/environment-setup))
+- For iOS: Xcode and CocoaPods
+- For Android: Android Studio and Android SDK
+
+## Using This Template
+
+### Option 1: Use GitHub Template
+
+1. Click the "Use this template" button at the top of the repository
+2. Choose "Create a new repository"
+3. Name your repository and click "Create repository from template"
+4. Clone your new repository:
    ```bash
-   npm install
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+   cd YOUR_REPO_NAME
    ```
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Option 2: Clone Directly
 
 ```bash
-npm run reset-project
+git clone https://github.com/YOUR_USERNAME/react-nativewind-template.git
+cd react-nativewind-template
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Installation
 
-## Learn more
+1. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-To learn more about developing your project with Expo, look at the following resources:
+2. Install iOS dependencies (macOS only):
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Running the App
 
-## Join the community
+### iOS
 
-Join our community of developers creating universal apps.
+```bash
+npm run ios
+# or
+yarn ios
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Android
+
+```bash
+npm run android
+# or
+yarn android
+```
+
+### Start Metro Bundler
+
+```bash
+npm start
+# or
+yarn start
+```
+
+## Project Structure
+
+```
+react-nativewind-template/
+├── app/                    # Main application code
+├── assets/                 # Images, fonts, and other assets
+├── components/             # Reusable components
+├── constants/              # App constants and configuration
+├── hooks/                  # Custom React hooks
+├── scripts/                # Build and utility scripts
+├── .vscode/               # VSCode settings
+├── app.json               # App configuration
+├── babel.config.js        # Babel configuration
+├── eslint.config.js       # ESLint configuration
+├── global.css             # Global styles
+├── metro.config.js        # Metro bundler configuration
+├── nativewind-env.d.ts    # NativeWind TypeScript definitions
+├── tailwind.config.js     # TailwindCSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Dependencies and scripts
+```
+
+## Using NativeWind
+
+NativeWind allows you to use TailwindCSS utility classes in your React Native components:
+
+```tsx
+import { View, Text } from 'react-native';
+
+export default function MyComponent() {
+  return (
+    <View className="flex-1 items-center justify-center bg-blue-500">
+      <Text className="text-white text-2xl font-bold">
+        Hello, NativeWind!
+      </Text>
+    </View>
+  );
+}
+```
+
+## Customization
+
+### Tailwind Configuration
+
+Modify `tailwind.config.js` to customize your design system:
+
+```javascript
+module.exports = {
+  content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        // Add your custom colors
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+### App Configuration
+
+Edit `app.json` to update your app name, display name, and other settings.
+
+## Scripts
+
+- `npm start` - Start Metro bundler
+- `npm run android` - Run on Android
+- `npm run ios` - Run on iOS
+- `npm run lint` - Run ESLint
+- `npm test` - Run tests
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This template is open source and available under the [MIT License](LICENSE).
+
+## Resources
+
+- [React Native Documentation](https://reactnative.dev/)
+- [NativeWind Documentation](https://www.nativewind.dev/)
+- [TailwindCSS Documentation](https://tailwindcss.com/)
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+
+## Support
+
+If you encounter any issues or have questions, please [open an issue](https://github.com/the-bipu/react-nativewind-template/issues) on GitHub.
+
+---
+
+**Happy coding!** 🚀
